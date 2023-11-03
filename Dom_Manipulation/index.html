@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .bg-black{
+            background-color: rgb(37, 34, 34);
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading">DOM learning on chai or code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, optio.</p>
+
+        <ul>
+            <li class="list-item" >one</li>
+            <li class="list-item" >two</li>
+            <li class="list-item" >three</li>
+            <li class="list-item" >four</li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('title').style.backgroundColor='green'
+        const title = document.getElementById('title')
+        title.style.padding = "15px"
+        title.style.borderRadius = "10px"
+
+        // title.innerText // DOM learning on chai or code
+        // title.innerContent // DOM learning on chai or code test text
+        // title.innerHTML // <h1 id="title" class="heading">DOM learning on chai or code <span style="display: none;">test text</span></h1>
+
+        document.getElementsByClassName('heading')
+    </script>
+</body>
+</html>

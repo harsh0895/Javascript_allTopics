@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure or lexical Scoping</title>
+</head>
+<body>
+    
+    <script>
+
+        // lexical Scoping:-
+        function Outer(){
+            let username = "Harsh";
+            function inner(){
+                console.log("inner", username);
+            }
+            inner();
+        }
+        Outer();
+       // console.log("outer", username) // => this line gives us error because we are accessing from the outside the function scope!
+
+        // Closures:-
+        function makeFunc(){
+            let name = "Hey";
+            function display(){
+                console.log(name);
+            }
+            return display;
+        }   
+
+        const myFunc = makeFunc(); // In this case returns lexical scope of makeFunc() or display() into the myFunc!
+        myFunc();
+    </script>
+</body>
+</html>

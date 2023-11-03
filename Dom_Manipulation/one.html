@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom | chai aur code</title>
+    
+    <style>
+        .bg-black{
+            background-color: rgb(37, 34, 34);
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+   const parent = document.querySelector('.parent');
+   console.log(parent); // print all days!
+   console.log(parent.children); //htmlcollection
+   console.log(parent.children[1].innerHTML); // tuesday
+
+//    for( let i=0; i<parent.children.length; i++){
+//     console.log(parent.children[i].innerHTML);
+//    }
+
+   parent.children[1].style.color = "orange"
+//    console.log(parent.firstElementChild) // monday move parent to child!
+//    console.log(parent.lastElementChild) // monday move parent to child!
+const dayOne = document.querySelector('.day')
+console.log(dayOne);
+console.log(dayOne.parentElement); //child to parent!
+console.log(dayOne.nextElementSibling);
+
+console.log("Nodes: ",parent.childNodes); // return a nodelist with enter text element space line!
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            display: flex;
+
+        }
+        .button{
+            width: 30px;
+            margin: 15px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body> 
+    <h1>Counter</h1>
+    <div class="block">
+        <button class="button" id = "add">+</button>
+        <span style="font-size: 30px;" id="count">0</span>
+        <button class="button" id="subtract">-</button>
+    </div>
+    </body>
+    <script>
+        let add = document.getElementById('add');
+        let subtract = document.getElementById('subtract');
+        let count = document.getElementById('count');
+        
+        
+        let counter = 0;
+        
+        add.addEventListener('click',function(){
+            ++counter;
+            count.innerText = counter;
+        })
+        subtract.addEventListener('click',function(){
+            counter--
+            if( counter<0 ){
+                alert("counter is going below 0!")
+                counter++;
+            }
+            else{    
+                count.innerText = counter;
+            }
+        })
+        
+    </script>
+</html>
