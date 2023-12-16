@@ -9,7 +9,8 @@
     
     <script>
 
-        // lexical Scoping:-
+        // lexical Scoping:- means we can access the variables of outer() funtion from the inner() funtion but we can not access to the 
+        //                   variables of inner() funtion from the outer() funtion is called lexical scoping.  
         function Outer(){
             let username = "Harsh";
             function inner(){
@@ -20,13 +21,13 @@
         Outer();
        // console.log("outer", username) // => this line gives us error because we are accessing from the outside the function scope!
 
-        // Closures:-
+        // Closures:- 
         function makeFunc(){
             let name = "Hey";
             function display(){
                 console.log(name);
             }
-            return display;
+            return display;  // we are returning a display() funtions scope as well as makeFunc() funtion scope. 
         }   
 
         const myFunc = makeFunc(); // In this case returns lexical scope of makeFunc() or display() into the myFunc!
